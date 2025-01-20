@@ -4,11 +4,6 @@ body {
   padding: 0;
   background: #f8f8f8;
   color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
 }
 
 .container {
@@ -17,17 +12,34 @@ body {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
 }
 
 h1 {
   color: #4caf50;
 }
 
-h1 .logo1 {
-  color: #4caf50;
+header .logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 10px;
+  margin-left: 10px;
 }
 
-h1 .logo2 {
+header .logo img {
+  width: 60px;
+  height: auto;
+}
+
+.logo .logo1 {
+  color: #28a745;
+}
+
+.logo .logo2 {
   color: #eb48a7;
 }
 
@@ -39,33 +51,22 @@ p {
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color: #f0ad31;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 20px;
-}
-
-header .logo {
-  display: flex;
-  gap: 10px;
-}
-
-header .logo img {
-  width: 80px;
-  height: 80px;
+  padding: auto;
 }
 
 header nav {
   display: flex;
   align-items: center;
-  margin-right: 50px;
 }
 
 header nav ul {
@@ -73,15 +74,12 @@ header nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-self: center;
   gap: 20px;
 }
 
 header nav ul li {
   margin: 0;
-  padding: 0;
 }
-
 header nav ul li a {
   text-decoration: none;
   color: #000000;
@@ -95,5 +93,5 @@ header nav ul li a:hover {
 }
 
 main {
-  margin-top: auto;
+  padding-top: 80px;
 }
