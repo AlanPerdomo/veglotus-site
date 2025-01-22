@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3005/user/';
+const API_URL = 'https://winning-lately-dodo.ngrok-free.app/user/';
 const token = localStorage.getItem('userToken');
 
 // Login

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const dropdownMenu = document.getElementById('dropdown-menu');
 
       if (token) {
-        const user = await fetch('http://localhost:3005/user/me', {
+        const user = await fetch('https://winning-lately-dodo.ngrok-free.app/user/me', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
