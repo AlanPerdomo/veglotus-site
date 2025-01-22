@@ -59,7 +59,17 @@ button {
   font-size: 16px;
 }
 
-.error-message {
+.register-button {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.register-button:hover {
+  color: #ffffff;
+  background-color: #f0ad31;
+}
+
+.error {
   color: red;
   font-size: 14px;
   margin-top: 10px;
@@ -150,4 +160,41 @@ header nav ul li a:hover {
 
 main {
   padding-top: 80px;
+}
+
+#user-menu {
+  position: relative;
+}
+
+#user-menu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+#user-menu .dropdown li {
+  padding: 10px 20px;
+}
+
+#user-menu .dropdown li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+#user-menu .dropdown li a:hover {
+  background-color: #f0f0f0;
+  color: #4caf50;
+}
+
+#user-menu .dropdown.show {
+  display: block;
 }

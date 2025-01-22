@@ -8,18 +8,39 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(async data => {
       headerContainer.innerHTML = data;
       const token = localStorage.getItem('userToken');
+      const userLink = document.getElementById('user-link');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+
       if (token) {
         const user = await fetch('http://localhost:3005/user/me', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }).then(response => response.json());
-        const loginLink = headerContainer.querySelector('a[href="login.html"]');
-        if (loginLink) {
-          loginLink.href = 'perfil.html';
-          loginLink.textContent = user.name;
-        }
+        userLink.textContent = user.name;
+        userLink.href = '#';
+
+        userLink.addEventListener('click', e => {
+          e.preventDefault();
+          dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', e => {
+          if (!dropdownMenu.contains(e.target) && e.target !== userLink) {
+            dropdownMenu.classList.remove('show');
+          }
+        });
       }
     })
     .catch(error => console.error(error));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const registerButton = document.getElementById('register-button');
+
+  if (registerButton) {
+    registerButton.addEventListener('click', () => {
+      window.location.href = 'register.html';
+    });
+  }
 });
