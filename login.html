@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veglótus - Login</title>
+    <script defer src="js/header.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="header" class="header"></div>
+    <main>
+      <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit">Entrar</button>
+        </form>
+        <p id="errorMessage" class="error"></p>
+      </div>
+      <script src="js/login.js"></script>
+    </body>
+  </main>
+  
+</html>
