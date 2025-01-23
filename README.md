@@ -3,6 +3,7 @@
 **Repositório para o desenvolvimento do site e loja online da Veglotus.**
 
 [![Build and Deploy Status](https://github.com/AlanPerdomo/veglotus-site/actions/workflows/jekyll-gh-pages.yml/badge.svg?branch=main)](https://github.com/AlanPerdomo/veglotus-site/actions/workflows/jekyll-gh-pages.yml)
+[![CodeQL](https://github.com/AlanPerdomo/veglotus-site/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/AlanPerdomo/veglotus-site/actions/workflows/github-code-scanning/codeql)
 
 ---
 
