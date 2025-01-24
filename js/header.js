@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (token) {
         const user = await fetch('https://winning-lately-dodo.ngrok-free.app/user/me', {
+          method: 'GET',
           headers: {
+            'ngrok-skip-browser-warning': 'true',
             Authorization: `Bearer ${token}`,
           },
         }).then(response => response.json());
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error(error));
 });
+console.log('teste');
 
 document.addEventListener('DOMContentLoaded', () => {
   const registerButton = document.getElementById('register-button');
