@@ -1,3 +1,5 @@
+const API_URL = 'http://localhost:3000/';
+
 document.addEventListener('DOMContentLoaded', () => {
   const headerContainer = document.getElementById('header');
   fetch('components/header.html')
@@ -10,15 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const token = localStorage.getItem('userToken');
       const userLink = document.getElementById('user-link');
       const dropdownMenu = document.getElementById('dropdown-menu');
+      const logoutButton = document.getElementById('logout-button');
 
       if (token) {
-        const user = await fetch('https://winning-lately-dodo.ngrok-free.app/user/me', {
+        const user = await fetch(API_URL + 'user/me', {
           method: 'GET',
           headers: {
             'ngrok-skip-browser-warning': 'true',
             Authorization: `Bearer ${token}`,
           },
         }).then(response => response.json());
+        if (user.message === 'Unauthorized') {
+          localStorage.removeItem('userToken');
+        }
         userLink.textContent = user.name;
         userLink.href = '#';
 
@@ -32,18 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
             dropdownMenu.classList.remove('show');
           }
         });
+
+        logoutButton.addEventListener('click', handleLogout);
       }
     })
     .catch(error => console.error(error));
-});
-console.log('teste');
-
-document.addEventListener('DOMContentLoaded', () => {
-  const registerButton = document.getElementById('register-button');
-
-  if (registerButton) {
-    registerButton.addEventListener('click', () => {
-      window.location.href = 'register.html';
-    });
-  }
 });

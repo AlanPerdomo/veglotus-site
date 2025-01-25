@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veglótus - Cadastro</title>
     <script defer src="js/header.js"></script>
+    <script defer src="js/user.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div id="header" class="header"></div>
     <main>
-      <div class="register-container">
+      <div class="form-container">
         <h1>Cadastro</h1>
         <form id="register-form">
           <label for="name">Nome:</label>
           <input type="text" id="name" name="name" required />
           <label for="cpf">CPF:</label>
-          <input type="number" id="cpf" name="cpf" required />
+          <input type="number" id="cpf" name="cpf" />
           <label for="phone">Telefone:</label>
           <input type="tel" id="phone" name="phone" required />
           <label for="email">E-mail:</label>
@@ -26,8 +27,10 @@
           <label for="confirm-password">Confirmar Senha:</label>
           <input type="password" id="confirm-password" name="confirm-password" required />
           <button type="submit">Cadastrar-se</button>
+          <p id="errorMessage" class="error"></p>
         </form>
+        <button class="login-button" id="login-button">Login</button>
       </div>
+    </body>
     </main>
-  </body>
 </html>
