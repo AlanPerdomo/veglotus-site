@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (registerButton) {
     registerButton.addEventListener('click', () => {
-      window.location.href = 'register.html';
+      window.location.href = 'registrar.html';
     });
   }
 
